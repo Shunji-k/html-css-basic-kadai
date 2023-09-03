@@ -1,0 +1,36 @@
+/* 14章課題 2023年8月28日 新規作成 */
+/* 要素 */
+html{
+    font-size: 20px;
+}
+
+body{
+    font-family:"Arial", "Meiryo", sans-serif ;
+}
+
+main{
+    text-align: center;
+}
+
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1.2em;
+    text-shadow: 0.5em 0.25em 0.5em rgb(192, 192, 180);
+    border-bottom: solid 3px rgb(115, 115, 114);
+}
+
+/* id */
+#basic P{
+    font-weight: bold;
+}
+
+/* class */
+    .font_color_skyblue{color: skyblue;
+}
+
+    .font_color_pink{color: rgb(255, 192, 203);
+}
+
+
