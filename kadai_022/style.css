@@ -1,0 +1,142 @@
+/********************
+ 要素 
+********************/
+header{
+  /* 下の余白を20px  */
+  margin-bottom: 20px;
+  /* 中の要素が中央揃え   */ 
+  text-align: center;
+  /* 背景色を「 rgb(244, 79, 79)」  */
+  background-color: rgb(244, 79, 79);
+}
+
+body{
+  /* 要素の上下左右余白（margin）を0 */
+  margin: 0;
+}
+
+main{
+  /* main要素内の余白を上下左右とも10px  */
+  padding: 10px;
+}
+
+footer{
+  /* 背景色はrgb(244, 79, 79)  */
+  background-color: rgb(244, 79, 79);
+  /* 中身の要素が中央揃え   */
+  text-align: center;
+}
+
+h1{
+  /* 要素の上下左右余白（margin）を0 */
+  margin: 0;
+  /* 文字色をrgb(255, 255, 255) */
+  color: rgb(255, 255, 255);
+}
+
+h2{
+  /* フォントサイズを25px */
+  font-size: 25px;
+  /* 下線（太さ3px、点線、色rgb(236, 122, 122)） */
+  border-bottom: 3px dotted rgb(236, 122, 122);
+}
+
+p{
+  /* 要素の上下左右余白（margin）を0 */
+  margin: 0;
+  /* フォントサイズを20px */
+  font-size: 20px;
+}
+
+a{
+  /* フォントサイズを20px */
+  font-size: 20px;
+}
+
+/********************
+ id
+********************/
+#parent{
+/* Flexコンテナ */
+display: flex;
+/* Flexboxコンテナの子要素（Flexアイテム）「一番左と一番右のアイテムも含め、均等な間隔で配置する」 */
+justify-content:space-around;
+
+}
+
+/********************
+ class
+********************/
+.contents{
+  /* 線（太さ3px、実線、色rgb(238, 204, 204)）で要素を囲う  */
+  border: 3px solid rgb(238, 204, 204);
+  /* 幅は親要素の25%*/
+  flex-basis: 25%;
+  /* 要素内の余白は上下10px、左右15px  */
+  padding: 10px 15px;
+  /* 要素外の余白は上下20px、左右0  */
+  margin: 20px 0;
+  /* 中の要素が中央揃え   */
+  text-align: center;
+}
+
+/********************
+ 個別指定・疑似要素・疑似Class
+********************/
+footer a{
+  /* 文字色はrgb(255, 255, 255) */
+  color: rgb(255, 255, 255);
+}
+
+footer a:hover{
+  /* マウスカーソルが乗ると文字色がrgb(245, 178, 168)に変化 */
+  color: rgb(245, 178, 168);
+}
+
+footer a:visited{
+  /* 訪問済みリンクの文字色がrgb(193, 234, 251)に変化 */
+  color: rgb(193, 234, 251);
+}
+
+h2::before{
+  /* 要素の前に「●」記号を表示 */
+  content: "●";
+  /* 色はrgb(239, 111, 139) */
+  color: rgb(239, 111, 139);
+}
+
+/* contents内の二番目のp要素内のテキストの中で一番目の文字 */
+.contents p:nth-child(3)::first-letter{
+  /* 太字 */
+  font-weight: bold;
+  /* 文字色はrgb(97, 206, 249) */
+  color: rgb(97, 206, 249);
+}
+
+/* contents内のimg要素 */
+.contents img{
+  /* marginは上下10px、左右0 */
+  margin: 10px 0;
+  /* 幅は70% */
+  width: 70%;
+}
+
+/********************
+ レスポンシブデザイン
+********************/
+/* 画面幅768px以下の場合 */
+@media screen and (max-width: 768px) {
+  h2{
+      /* フォントサイズは30px */
+      font-size: 30px;
+  }
+
+  p{
+    /* フォントサイズは25px */
+    font-size: 25px;
+  } 
+  #parent{
+    /* parent内の要素が縦に並ぶ */
+    flex-direction:column;
+  }
+}
